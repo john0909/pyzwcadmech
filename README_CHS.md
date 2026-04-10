@@ -28,7 +28,7 @@
 
 ## 3. 快速入门
 
-以下是一个简单的示例，演示如何连接到中望机械并读取当前图纸的标题栏数据：
+以下是一个简单的示例，演示如何连接到中望机械并读取当前图纸的标题栏数据，使
 
 ```python
 from pyzwcadmech import ZwCADMech
@@ -141,6 +141,8 @@ mech = ZwCADMech(cad_app=None)
 - `build_frame(switch_type: int = 511)`: 重建图幅块及关联块。
 
 ## 5. 常见问题 (FAQ)
+**Q:运行报错`ModuleNotFoundError: No module named 'pyzwcadmech'`**
+A:原因为pyzwcadmech库未安装，可使用`pip install pyzwcadmech`来进行安装
 
 **Q: 运行报错 `Failed to load ZwmToolKit.tlb` 或 `ModuleNotFoundError`**
 A: 请确保 `ZwmToolKit.tlb` 文件存在于当前运行脚本的目录下，或者放在 `pyzwcadmech` 文件夹旁边。同时确保已安装 `comtypes` 库。
