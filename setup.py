@@ -6,12 +6,12 @@ with open("README_EN.md", "r", encoding="utf-8") as fh:
 setup(
     name="pyzwcadmech",
     version="0.1.0",
-    author="Your Name",
-    author_email="your.email@example.com",
+    author="John Zhang",
+    author_email="zhangxiang@zwcad.com",
     description="A Python wrapper for ZWCAD Mechanical COM API",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/yourusername/pyzwcadmech",
+    url="https://github.com/john0909/pyzwcadmech",
     packages=find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3",

@@ -2,9 +2,9 @@ Metadata-Version: 2.4
 Name: pyzwcadmech
 Version: 0.1.0
 Summary: A Python wrapper for ZWCAD Mechanical COM API
-Home-page: https://github.com/yourusername/pyzwcadmech
-Author: Your Name
-Author-email: your.email@example.com
+Home-page: https://github.com/john0909/pyzwcadmech
+Author: John Zhang
+Author-email: zhangxiang@zwcad.com
 Classifier: Programming Language :: Python :: 3
 Classifier: License :: OSI Approved :: MIT License
 Classifier: Operating System :: Microsoft :: Windows
