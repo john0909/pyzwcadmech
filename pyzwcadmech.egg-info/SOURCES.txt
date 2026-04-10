@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README_EN.md
+setup.py
+pyzwcadmech/__init__.py
+pyzwcadmech/api.py
+pyzwcadmech.egg-info/PKG-INFO
+pyzwcadmech.egg-info/SOURCES.txt
+pyzwcadmech.egg-info/dependency_links.txt
+pyzwcadmech.egg-info/requires.txt
+pyzwcadmech.egg-info/top_level.txt
