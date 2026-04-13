@@ -1,17 +1,17 @@
 ﻿# pyzwcadmech Documentation
 
-`pyzwcadmech` is a Python wrapper for the ZWCAD Mechanical COM API (`ZwmToolKit.tlb`). It encapsulates the underlying COM pointer operations into a Pythonic object-oriented API, allowing developers to easily read and modify mechanical-specific objects such as title blocks, BOMs (Bill of Materials), and drawing frames using Python scripts.
+`pyzwcadmech` is a Python wrapper for the ZWCAD MFG COM API (`ZwmToolKit.tlb`). It encapsulates the underlying COM pointer operations into a Pythonic object-oriented API, allowing developers to easily read and modify mechanical-specific objects such as title blocks, BOMs (Bill of Materials), and drawing frames using Python scripts.
 
 ## 1. Requirements
 
 - **OS**: Windows
-- **Software Dependency**: A licensed installation of **ZWCAD Mechanical**.
+- **Software Dependency**: A licensed installation of **ZWCAD MFG**.
 - **Python Environment**: Python 3.x
 - **Third-party Libraries**: `comtypes` (for COM component communication)
   ```bash
   pip install comtypes
   ```
-- **Core Files**: The `ZwmToolKit.tlb` file will be automatically searched in the standard ZWCAD Mechanical installation path. If not found, ensure it is placed in the project root or the same directory as the `pyzwcadmech` module.
+- **Core Files**: The `ZwmToolKit.tlb` file will be automatically searched in the standard ZWCAD MFG installation path. If not found, ensure it is placed in the project root or the same directory as the `pyzwcadmech` module.
 
 ## 2. Directory Structure
 
@@ -19,7 +19,7 @@ Ensure your project directory has the following structure:
 
 ```text
 your_project_directory/
-├── ZwmToolKit.tlb       # (Optional) COM type library file provided by ZWCAD Mechanical
+├── ZwmToolKit.tlb       # (Optional) COM type library file provided by ZWCAD MFG
 ├── pyzwcadmech/         # Core wrapper library
 │   ├── __init__.py
 │   └── api.py
@@ -28,13 +28,13 @@ your_project_directory/
 
 ## 3. Quick Start
 
-Below is a simple example demonstrating how to connect to ZWCAD Mechanical and read the title block data of the current drawing:
+Below is a simple example demonstrating how to connect to ZWCAD MFG and read the title block data of the current drawing:
 
 ```python
 from pyzwcadmech import ZwCADMech
 
 def main():
-    # 1. Initialize and connect to ZWCAD Mechanical
+    # 1. Initialize and connect to ZWCAD MFG
     mech = ZwCADMech()
     
     # 2. Connect to the current active drawing
@@ -53,7 +53,7 @@ def main():
         # title.set_item("Designer", "John Doe")
         # mech.zwm_db.refresh_title() # Refresh the drawing display
 
-    # 4. Interactive editing (pops up the ZWCAD Mechanical editing dialog)
+    # 4. Interactive editing (pops up the ZWCAD MFG editing dialog)
     # mech.title_edit()
     
     # 5. Save and disconnect
@@ -64,7 +64,7 @@ if __name__ == "__main__":
     main()
 ```
 How to Run the Examples:
-- Install the dependencies: `pip install pyzwcadmech` to install the ZWCAD Mechanical library, and `pip install pyQt5` to install PyQt5.
+- Install the dependencies: `pip install pyzwcadmech` to install the ZWCAD MFG library, and `pip install pyQt5` to install PyQt5.
 
 - Install ZWCAD MFG: Ensure that ZWCAD MFG is installed on your system. You can download the installation package here: https://www.zwsoft.com/product/zwcad/mfg
 
@@ -149,12 +149,12 @@ In addition to the basic methods delegated by `ZwCADMech`, `ZwmDb` also provides
 ## 5. FAQ
 
 **Q: Running error `Failed to load ZwmToolKit.tlb` or `ModuleNotFoundError`**
-A: Ensure that ZWCAD Mechanical is installed on your system. If it is installed in a non-standard path, please copy the `ZwmToolKit.tlb` file to the directory where the script is running, or place it next to the `pyzwcadmech` folder. Also, ensure the `comtypes` library is installed.
+A: Ensure that ZWCAD MFG is installed on your system. If it is installed in a non-standard path, please copy the `ZwmToolKit.tlb` file to the directory where the script is running, or place it next to the `pyzwcadmech` folder. Also, ensure the `comtypes` library is installed.
 
-**Q: Running error `Failed to create ZwmToolKit.ZwmApp. Please check if ZWCAD Mechanical is installed and running.`**
+**Q: Running error `Failed to create ZwmToolKit.ZwmApp. Please check if ZWCAD MFG is installed and running.`**
 A: This is usually because:
-1. The standard version of ZWCAD is installed on the computer, not the **Mechanical version** (ZWCAD Mechanical).
-2. The COM component of ZWCAD Mechanical is not registered correctly. Try running ZWCAD Mechanical once as an administrator.
+1. The standard version of ZWCAD is installed on the computer, not the **Mechanical version** (ZWCAD MFG).
+2. The COM component of ZWCAD MFG is not registered correctly. Try running ZWCAD MFG once as an administrator.
 
 **Q: Getting title block or BOM returns null or throws an error**
-A: Ensure that `mech.open_file("")` has been successfully called to bind the drawing database before calling `get_title()` or `get_bom()`. Also, ensure that the title block or BOM entities of ZWCAD Mechanical actually exist in the current drawing.
+A: Ensure that `mech.open_file("")` has been successfully called to bind the drawing database before calling `get_title()` or `get_bom()`. Also, ensure that the title block or BOM entities of ZWCAD MFG actually exist in the current drawing.
