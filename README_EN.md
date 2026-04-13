@@ -64,13 +64,11 @@ if __name__ == "__main__":
     main()
 ```
 How to Run the Examples:
-1.Install the dependencies: `pip install pyzwcadmech` to install the ZWCAD Mechanical library, and `pip install pyQt5` to install PyQt5.
+- Install the dependencies: `pip install pyzwcadmech` to install the ZWCAD Mechanical library, and `pip install pyQt5` to install PyQt5.
 
-Install ZWCAD Mechanical 2026: Ensure that ZWCAD Mechanical 2026 is installed on your system. You can download the installation package here: https://www.zwsoft.cn/product/zwcad/mechanical
+- Install ZWCAD MFG: Ensure that ZWCAD MFG is installed on your system. You can download the installation package here: https://www.zwsoft.com/product/zwcad/mfg
 
-Run the script: Execute the example script located in the examples directory by running:
-
-`python pyqt_ZWM_example_en.py`
+- Run the script: Execute the example located in the examples directory by running: `python pyqt_ZWM_example_en.py`
 
 ## 4. API Reference
 

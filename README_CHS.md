@@ -64,9 +64,8 @@ if __name__ == "__main__":
     main()
 ```
 示例如何使用：
-1.使用命令`pip install pyzwcadmech`安装zwcad机械库,使用`pip install pyQt5`安装好
-2.安装好中望机械2026，安装包路径：`https://www.zwsoft.cn/product/zwcad/mechanical`
-2.运行examples目录下的示例`python pyqt_ZWM_example_chs.py`
+- 1.使用命令`pip install pyzwcadmech`安装zwcad机械库,使用`pip install pyQt5`安装好中望机械2026，安装包路径：`https://www.zwsoft.cn/product/zwcad/mechanical`
+- 2.运行examples目录下的示例`python pyqt_ZWM_example_chs.py`
 
 ## 4. API 参考
 

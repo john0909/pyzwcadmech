@@ -366,10 +366,10 @@ class MainWindow(QMainWindow):
         main_layout = QVBoxLayout(central_widget)
 
         # 1. Connection Area
-        conn_group = QGroupBox("Connect to ZWCAD Mechanical")
+        conn_group = QGroupBox("Connect to ZWCAD MFG")
         conn_layout = QGridLayout()
         
-        self.btn_start = QPushButton("Start/Connect Mechanical Software")
+        self.btn_start = QPushButton("Start/Connect ZWCAD MFG")
         self.btn_start.clicked.connect(self.on_start_clicked)
         
         self.txt_cad_path = QLineEdit()
@@ -483,7 +483,7 @@ class MainWindow(QMainWindow):
                     self.txt_cad_path.setText(zwm_app.get_cad_path())
                     self.txt_zwm_path.setText(zwm_app.get_zwm_path())
                     self.txt_version.setText(zwm_app.get_version())
-                    QMessageBox.information(self, "Success", "Successfully connected to ZWCAD Mechanical!")
+                    QMessageBox.information(self, "Success", "Successfully connected to ZWCAD MFG!")
                 except Exception as e:
                     QMessageBox.warning(self, "Warning", f"Failed to get path info: {e}")
             else:
@@ -501,7 +501,7 @@ class MainWindow(QMainWindow):
 
     def on_open_clicked(self):
         if not self.mech or not self.mech.zwm_db:
-            QMessageBox.warning(self, "Warning", "Please connect or start the mechanical software first")
+            QMessageBox.warning(self, "Warning", "Please connect or start the ZWCAD MFG first")
             return
             
         filepath = self.txt_file.text()
@@ -518,7 +518,7 @@ class MainWindow(QMainWindow):
 
     def on_title_clicked(self):
         if not self.mech or not self.mech.zwm_db:
-            QMessageBox.warning(self, "Warning", "Please connect or start the mechanical software first")
+            QMessageBox.warning(self, "Warning", "Please connect or start the ZWCAD MFG first")
             return
         try:
             title = self.mech.get_title()
@@ -532,7 +532,7 @@ class MainWindow(QMainWindow):
 
     def on_bom_clicked(self):
         if not self.mech or not self.mech.zwm_db:
-            QMessageBox.warning(self, "Warning", "Please connect or start the mechanical software first")
+            QMessageBox.warning(self, "Warning", "Please connect or start the ZWCAD MFG first")
             return
         try:
             bom = self.mech.get_bom()
@@ -546,7 +546,7 @@ class MainWindow(QMainWindow):
 
     def on_frame_clicked(self):
         if not self.mech or not self.mech.zwm_db:
-            QMessageBox.warning(self, "Warning", "Please connect or start the mechanical software first")
+            QMessageBox.warning(self, "Warning", "Please connect or start the ZWCAD MFG first")
             return
         try:
             frame = self.mech.get_frame()
@@ -560,7 +560,7 @@ class MainWindow(QMainWindow):
 
     def on_save_clicked(self):
         if not self.mech or not self.mech.zwm_db:
-            QMessageBox.warning(self, "Warning", "Please connect or start the mechanical software first")
+            QMessageBox.warning(self, "Warning", "Please connect or start the ZWCAD MFG first")
             return
         try:
             self.mech.save()
@@ -570,7 +570,7 @@ class MainWindow(QMainWindow):
 
     def on_close_clicked(self):
         if not self.mech or not self.mech.zwm_db:
-            QMessageBox.warning(self, "Warning", "Please connect or start the mechanical software first")
+            QMessageBox.warning(self, "Warning", "Please connect or start the ZWCAD MFG first")
             return
         try:
             self.mech.close()
@@ -583,25 +583,25 @@ class MainWindow(QMainWindow):
         if self.mech and self.mech.zwm_db:
             self.mech.title_edit()
         else:
-            QMessageBox.warning(self, "Warning", "Please connect or start the mechanical software first")
+            QMessageBox.warning(self, "Warning", "Please connect or start the ZWCAD MFG first")
 
     def on_mxb_edit_clicked(self):
         if self.mech and self.mech.zwm_db:
             self.mech.total_bom_edit()
         else:
-            QMessageBox.warning(self, "Warning", "Please connect or start the mechanical software first")
+            QMessageBox.warning(self, "Warning", "Please connect or start the ZWCAD MFG first")
 
     def on_frame_edit_clicked(self):
         if self.mech and self.mech.zwm_db:
             self.mech.frame_edit()
         else:
-            QMessageBox.warning(self, "Warning", "Please connect or start the mechanical software first")
+            QMessageBox.warning(self, "Warning", "Please connect or start the ZWCAD MFG first")
 
     def on_fjl_edit_clicked(self):
         if self.mech and self.mech.zwm_db:
             self.mech.fjl_edit()
         else:
-            QMessageBox.warning(self, "Warning", "Please connect or start the mechanical software first")
+            QMessageBox.warning(self, "Warning", "Please connect or start the ZWCAD MFG first")
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
