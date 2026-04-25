@@ -1,3 +1,5 @@
+[English](README_EN.md) | [中文](README_CN.md)
+
 # pyzwcadmech Documentation
 
 `pyzwcadmech` is a Python wrapper for the ZWCAD Mechanical COM API (`ZwmToolKit.tlb`). It encapsulates the underlying COM pointer operations into a Pythonic object-oriented API, allowing developers to easily read and modify mechanical-specific objects such as title blocks, BOMs (Bill of Materials), and drawing frames using Python scripts.
